@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page </title>
+</head>
+<body>
+    <h2>Animal game by Sai Vivek Reddy Gankidi</h2>
+
+<form>
+    <label for="hiddenAnimal">The hidden animal type:</label>
+    <input type="password" id="hiddenAnimal" value="Chicken">
+
+    <br>
+
+    <label for="guessAnimal">Guess the animal:</label>
+    <input type="text" id="guessAnimal">
+
+    <br>
+
+    <button type="button" onclick="checkAnimal()">Check the guess</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+
+    let wrong = 0;
+    let correct = 0;
+
+    function checkAnimal() {
+        const hiddenAnimalValue = document.getElementById('hiddenAnimal').value;
+        const guessAnimalValue = document.getElementById('guessAnimal').value;
+
+        if (hiddenAnimalValue === guessAnimalValue) {
+            correct++;
+            alert('Ruff ruff');
+        } else {
+            wrong++;
+            alert('Grrrr');
+        }
+
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = `Correct: ${correct}, Wrong: ${wrong}`;
+    }
+</script>
+    
+</body>
+</html>
