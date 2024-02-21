@@ -39,6 +39,29 @@
     } 
  </script>
 
+ <form>
+    <label for="Month name">Enter travel month:</label>
+    <input type="text" id="travelMonth" value="May">
+    <br>
+    <label for="Tsrip Price">Enter Price:</label>
+    <input type="text" id="tripPrice">
+    <br>
+</form>
+<br>
+<button type="button" onclick="UpdateThePack()">Update the pack</button>
+<script>
+   function UpdateThePack() {
+       let month = document.getElementById("travelMonth").value;
+       let price = document.getElementById("tripPrice").value;
+
+       my_pack["Month Name"] = month;
+       my_pack["Trip Price"] = price;
+
+       document.getElementById("results").innerHTML = JSON.stringify(my_pack);
+   }
+
+</script>
+
 
 </body>
 </html> 
