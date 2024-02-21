@@ -46,5 +46,29 @@
     }
 </script>
     
+<h3>Click on the image</h3>
+<div><img src="Ginger Beer.jpg" id="image" width="150" height="150" onclick="selectImage()"></div>
+
+  <script>
+        var useImage = 1
+        function selectImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("image").src = "Irish Coffee.jpg";
+                    useImage++
+                    break
+                case 2:
+                    document.getElementById("image").src = "Negroni.jpg";
+                    useImage++
+                    break
+                case 3:
+                    document.getElementById("image").src = "Ginger Beer.jpg";
+                    useImage = 1
+                    break
+                default:
+            }
+        }
+           </script>
+
 </body>
 </html>
